@@ -1,0 +1,30 @@
+<div class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1 class="show-for-large-up">{{link-to 'South Carolina Sheltie Rescue' 'index'}}</h1>
+        <h1 class="show-for-medium-down">{{link-to 'SCSR' 'index'}}</h1>
+      </li>
+      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="active">{{link-to 'Home' 'index'}}</li>
+        <li class="has-dropdown"><a href="#">Adopt</a>
+          <ul class="dropdown">
+            <li>{{link-to 'Adoption Requirements' 'adoption-requirements'}}</li>
+            <li>{{link-to 'Adoptable Dogs' 'available-dogs'}}</li>
+            <li>{{link-to 'Adoption Application' 'apply-to-adopt'}}</li>
+            <li>{{link-to 'Fostering Application' 'apply-to-foster'}}</li>
+          </ul>
+        </li>
+        <li>{{link-to 'Surrender a Sheltie' 'surrender'}}</li>
+        <li>{{link-to 'Help and Advice' 'help-and-advice'}}</li>
+        <li>{{link-to 'Rescue Events' 'events'}}</li>
+      </ul>
+    </section>
+  </nav>
+</div>

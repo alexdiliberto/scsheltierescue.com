@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="large-12 medium-12 small-12 columns">
+    <main role="main" class="main-content">
+      <h2 class="headline first">Available for Adoption</h2>
+      <p>You can view our available dogs below or on our <a href="http://www.petfinder.com/pet-search?animal_type=&pet_breed=&pet_age=&pet_size=&specialNeeds=&declawedPets=&children=&status=&shelter_pet_id=&internal=&contact=&name=&shelter_id=SC92&sort=" target="_blank">Petfinder site</a>. If you are interested in adopting one of our rescue dogs, please complete and submit our {{link-to 'Adoption Application' 'apply-to-adopt'}} form. If you have any questions feel free to <a href="mailto:amanda@southcarolinasheltierescue.com">email</a> us.</p>
+
+      <div id="pets" class="clearfix">
+        {{#if isError}}
+          <div id="petfinder-api-error" data-alert class="alert-box alert">
+            <p>
+              Oops, something went wrong! Please try again later or go directly to our <a href="http://www.petfinder.com/pet-search?shelterid=SC92">Petfinder site</a>.
+              <a href="#" class="close">&times;</a>
+            </p>
+          </div>
+        {{else}}
+          {{#each model as |pet|}}
+            {{pet-card pet=pet}}
+          {{else}}
+            <div class="alert-box" data-alert>
+              <p>There are currently no available dogs</p>
+            </div>
+          {{/each}}
+        {{/if}}
+      </div>
+
+      <input id="btnMore" type="button" class="large button expand invisible" value="View More" />
+    </main>
+  </div>
+</div>
