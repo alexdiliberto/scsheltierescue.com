@@ -12,18 +12,18 @@
 
     <section class="top-bar-section">
       <ul class="right">
-        <li class="active">{{link-to 'Home' 'index'}}</li>
+        {{#active-link}}{{link-to 'Home' 'index'}}{{/active-link}}
         <li class="has-dropdown"><a href="#">Adopt</a>
           <ul class="dropdown">
-            <li>{{link-to 'Adoption Requirements' 'adoption-requirements'}}</li>
-            <li>{{link-to 'Adoptable Dogs' 'available-dogs'}}</li>
-            <li>{{link-to 'Adoption Application' 'apply-to-adopt'}}</li>
-            <li>{{link-to 'Fostering Application' 'apply-to-foster'}}</li>
+            {{#active-link}}{{link-to 'Adoption Requirements' 'adoption-requirements'}}{{/active-link}}
+            {{#active-link}}{{link-to 'Adoptable Dogs' 'available-dogs'}}{{/active-link}}
+            {{#active-link}}{{link-to 'Adoption Application' 'apply-to-adopt'}}{{/active-link}}
+            {{#active-link}}{{link-to 'Fostering Application' 'apply-to-foster'}}{{/active-link}}
           </ul>
         </li>
-        <li>{{link-to 'Surrender a Sheltie' 'surrender'}}</li>
-        <li>{{link-to 'Help and Advice' 'help-and-advice'}}</li>
-        <li>{{link-to 'Rescue Events' 'events'}}</li>
+        {{#active-link}}{{link-to 'Surrender a Sheltie' 'surrender'}}{{/active-link}}
+        {{#active-link}}{{link-to 'Help and Advice' 'help-and-advice'}}{{/active-link}}
+        {{#active-link}}{{link-to 'Rescue Events' 'events'}}{{/active-link}}
       </ul>
     </section>
   </nav>

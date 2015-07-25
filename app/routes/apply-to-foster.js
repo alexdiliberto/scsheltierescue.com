@@ -8,7 +8,7 @@ const {
 export default Route.extend({
   actions: {
     fosteringApplicationMail() {
-      const controller = this.controller;
+      const { controller } = this;
       const fosterMailerRequest = ajax({
         url:      '/foster-mailer/foster-mailer.php',
         type:     'POST',
@@ -17,7 +17,7 @@ export default Route.extend({
       });
 
       fosterMailerRequest.then(function(result) {
-        const response = result.response;
+        const { response } = result;
 
         controller.setProperties({
           isSubmitted: true,

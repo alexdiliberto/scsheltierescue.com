@@ -5,7 +5,7 @@ const {
 } = Ember;
 
 export default Route.extend({
-  redirect: function() {
+  redirect() {
     const url = this.router.location.formatURL('/not-found');
     if (window.location.pathname !== url) {
       this.transitionTo('/not-found');

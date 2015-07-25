@@ -2,7 +2,7 @@ import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
   namespace: 'pet',
-  pathForType: function() {
+  pathForType() {
     return 'petfinder.php';
   }
 });

@@ -8,7 +8,7 @@ const {
 export default Route.extend({
   actions: {
     adoptionApplicationMail() {
-      const controller = this.controller;
+      const { controller } = this;
       const adoptMailerRequest = ajax({
         url:      '/adopt-mailer/adopt-mailer.php',
         type:     'POST',
@@ -17,7 +17,7 @@ export default Route.extend({
       });
 
       adoptMailerRequest.then(function(result) {
-        const response = result.response;
+        const { response } = result;
 
         controller.setProperties({
           isSubmitted: true,

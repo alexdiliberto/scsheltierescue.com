@@ -6,6 +6,12 @@
   "disallowPaddingNewlinesInBlocks": true,
   "disallowSpacesBeforeSemicolons": true,
   "disallowSpacesInsideRoundBracesInCallExpression": true,
+  "disallowVar": true,
+  "requireEnhancedObjectLiterals": true,
+  "requireTemplateStringsForConcatenation": true,
+  "requireObjectDestructuring": {
+    "allExcept": ["get", "set"]
+  },
   "requireSpacesAfterClosingParenthesisInFunctionDeclaration": {
     "beforeOpeningRoundBrace": false,
     "beforeOpeningCurlyBrace": true
@@ -85,5 +91,8 @@
     "!=="
   ],
   "requireSpaceBetweenArguments": true,
-  "validateQuoteMarks": "'"
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true
+  }
 }

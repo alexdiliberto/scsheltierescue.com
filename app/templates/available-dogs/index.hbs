@@ -1,0 +1,13 @@
+<div id="pets" class="clearfix">
+  {{log model}}
+
+  {{#each model as |pet|}}
+    {{pet-card pet=pet}}
+  {{else}}
+    <div class="alert-box" data-alert>
+      <p>There are currently no available dogs</p>
+    </div>
+  {{/each}}
+</div>
+
+<input id="btnMore" type="button" class="large button expand invisible" value="View More" />

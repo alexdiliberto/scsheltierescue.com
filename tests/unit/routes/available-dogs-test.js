@@ -6,6 +6,6 @@ moduleFor('route:available-dogs', 'Unit | Route | available dogs', {
 });
 
 test('it exists', function(assert) {
-  var route = this.subject();
+  const route = this.subject();
   assert.ok(route);
 });

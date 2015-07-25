@@ -14,9 +14,9 @@ let currentOffset = 0;
 // function petfinderDone(data) {
 //   currentOffset = parseInt(data.petfinder.lastOffset.$t, 10);
 
-//   var pets = normalizeToArray(data.petfinder.pets.pet);
-//   var context = { pets: [] };
-//   //var maxOffset = 25; //equals 'count' value from petfinder.php
+//   const pets = normalizeToArray(data.petfinder.pets.pet);
+//   const context = { pets: [] };
+//   //const maxOffset = 25; //equals 'count' value from petfinder.php
 
 //   pets.forEach(function(pet) {
 //     context.pets.push(formatPet(pet));
@@ -35,7 +35,16 @@ let currentOffset = 0;
 //   //}
 // }
 
+
+function petfinderSuccess(data) {
+  debugger;
+  console.log('*** SUCCESS ***');
+  //this.controller.set('isError', false);
+  return data;
+}
+
 function petfinderFail() {
+  debugger;
   console.log('*** ERROR ***');
   //this.controller.set('isError', true);
   //spinnerStop();
@@ -51,45 +60,6 @@ function reinitializeFoundation() {
   return Ember.$(document).foundation('clearing', 'reflow');
 }
 
-// function formatPet(pet) {
-//   var petContext = { options: [] },
-//       name = pet.name.$t,
-//       sex = pet.sex.$t,
-//       desc = pet.description.$t.trim(),
-//       options = normalizeToArray(pet.options.option),
-//       isFirst = true,
-//       optListItem;
-
-//   options.forEach(function(option) {
-//     optListItem = formatOptionListItem(option, sex);
-//     if(optListItem) {
-//       petContext.options.push(optListItem);
-//     }
-//   });
-
-//   petContext.photos = [];
-//   if(pet.media.photos && pet.media.photos.photo.length) {
-//     var photos = pet.media.photos.photo;
-
-//     photos.forEach(function(photo) {
-//       if(photo['@size'] === "x") {
-//         petContext.photos.push({
-//           first: isFirst,
-//           src: photo.$t,
-//           alt: name + photo['@id']
-//         });
-//         isFirst = false;
-//       }
-//     });
-//   }
-
-//   petContext.name = name;
-//   petContext.sex = sex;
-//   petContext.desc = sanitizePetDesc(desc);
-
-//   return petContext;
-// }
-
 export default Route.extend({
   beforeModel() {
     currentOffset = 0;
@@ -97,13 +67,23 @@ export default Route.extend({
 
   model() {
     return this.store.find('pet', { offset: currentOffset })
+                     .then(petfinderSuccess)
                      .catch(petfinderFail)
                      .then(petfinderAlways);
   }
+
   // model: function() {
   //   return ajax(url, { offset: currentOffset })
   //     .then(formatOptionListItem)
   //     .catch(petfinderFail)
   //     .then(petfinderAlways);
+  // }
+
+  // actions: {
+  //   error(error, transition) {
+  //     debugger;
+  //     // handle the error
+  //     console.log(error.message);
+  //   }
   // }
 });

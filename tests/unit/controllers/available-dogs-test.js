@@ -1,11 +1,12 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:apply-to-adopt', 'Unit | Route | apply to adopt', {
+moduleFor('controller:available-dogs', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
 
+// Replace this with your real tests.
 test('it exists', function(assert) {
-  const route = this.subject();
-  assert.ok(route);
+  const controller = this.subject();
+  assert.ok(controller);
 });

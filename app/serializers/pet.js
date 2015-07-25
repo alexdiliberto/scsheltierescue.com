@@ -22,7 +22,7 @@ let sanitizePetDesc = function(desc) {
   if (desc.match('^<div>') && desc.match('</div>$')) {
     desc = desc.replace(/^<div>/, '<p>').replace(/<\/div>$/, '</p>');
   } else if (!desc.match('^<') && !desc.match('>$')) {
-    desc = '<p>' + desc + '</p>';
+    desc = `<p>${desc}</p>`;
   }
   return desc;
 };
@@ -67,7 +67,7 @@ let formatOptionListItem = function(option, sex) {
 };
 
 export default RESTSerializer.extend({
-  normalizePayload: function(payload) {
+  normalizePayload(payload) {
     delete payload['@encoding'];
     delete payload['@version'];
     delete payload.petfinder['@xmlns:xsi'];
@@ -99,8 +99,8 @@ export default RESTSerializer.extend({
       pet.status = pet.status['$t'];
 
       if (pet.media.photos && pet.media.photos.photo.length) {
-        //var photo;
-        var isFirstPhoto = false;
+        //const photo;
+        let isFirstPhoto = false;
 
         pet.photos = pet.media.photos.photo.map(function(photo) {
           if (photo['@size'] === 'x') {
@@ -109,7 +109,7 @@ export default RESTSerializer.extend({
               id: parseInt(photo['@id'], 10),
               url: photo['$t'],
               size: photo['@size'],
-              alt: this.name + ' photo #' + parseInt(photo['@id'], 10)
+              alt: `${this.name} photo #${parseInt(photo['@id'], 10)}`
             };
             isFirstPhoto = true;
             return photo;

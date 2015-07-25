@@ -6,7 +6,7 @@ moduleForModel('pet', 'Unit | Model | pet', {
 });
 
 test('it exists', function(assert) {
-  var model = this.subject();
-  // var store = this.store();
+  const model = this.subject();
+  // const store = this.store();
   assert.ok(!!model);
 });

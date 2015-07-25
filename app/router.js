@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import config from './config/environment';
 
-var Router = Ember.Router.extend({
+const Router = Ember.Router.extend({
   location: config.locationType
 });
 
@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('adoption-requirements');
   this.route('apply-to-adopt');
   this.route('apply-to-foster');
-  this.route('available-dogs');
+  this.route('available-dogs', function() {});
   this.route('help-and-advice');
   this.route('events');
   this.route('surrender');
