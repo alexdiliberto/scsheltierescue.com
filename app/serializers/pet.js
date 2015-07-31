@@ -50,6 +50,9 @@ let formatOptionListItem = function(option, sex) {
       listchild.text = 'Housebroken: ';
       listchild.icon = true;
       break;
+    case 'specialNeeds':
+      listchild.text = 'Special Needs';
+      break;
     case 'noKids':
       listchild.text = 'No Kids';
       break;
