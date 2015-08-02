@@ -70,16 +70,16 @@ let formatOptionListItem = function(option, sex) {
 };
 
 export default RESTSerializer.extend({
-  normalizePayload(payload) {
-    delete payload['@encoding'];
-    delete payload['@version'];
-    delete payload.petfinder['@xmlns:xsi'];
-    delete payload.petfinder['@xsi:noNamespaceSchemaLocation'];
-    delete payload.petfinder['header'];
+  normalizePayload(response) {
+    delete response['@encoding'];
+    delete response['@version'];
+    delete response.petfinder['@xmlns:xsi'];
+    delete response.petfinder['@xsi:noNamespaceSchemaLocation'];
+    delete response.petfinder['header'];
 
-    payload.petfinder.lastOffset = parseInt(payload.petfinder.lastOffset['$t'], 10);
+    response.petfinder.lastOffset = parseInt(response.petfinder.lastOffset['$t'], 10);
 
-    pets = payload.petfinder.pets = normalizeToArray(payload.petfinder.pets.pet);
+    pets = response.petfinder.pets = normalizeToArray(response.petfinder.pets.pet);
     pets.forEach(function(pet) {
       pet.id = parseInt(pet.id['$t'], 10);
       pet.name = pet.name['$t'];
@@ -109,7 +109,9 @@ export default RESTSerializer.extend({
           if (photo['@size'] === 'x') {
             photo = {
               first: !isFirstPhoto,
-              id: parseInt(photo['@id'], 10),
+              id: this.id,
+              num: parseInt(photo['@id'], 10),
+              name: this.name,
               url: photo['$t'],
               size: photo['@size'],
               alt: `${this.name} photo #${parseInt(photo['@id'], 10)}`
@@ -132,6 +134,6 @@ export default RESTSerializer.extend({
       delete pet.contact;
     });
 
-    return payload.petfinder;
+    return response.petfinder;
   }
 });

@@ -37,14 +37,12 @@ let currentOffset = 0;
 
 
 function petfinderSuccess(data) {
-  debugger;
   console.log('*** SUCCESS ***');
   //this.controller.set('isError', false);
   return data;
 }
 
 function petfinderFail() {
-  debugger;
   console.log('*** ERROR ***');
   //this.controller.set('isError', true);
   //spinnerStop();
@@ -66,7 +64,7 @@ export default Route.extend({
   },
 
   model() {
-    return this.store.find('pet', { offset: currentOffset })
+    return this.store.query('pet', { offset: currentOffset })
                      .then(petfinderSuccess)
                      .catch(petfinderFail)
                      .then(petfinderAlways);

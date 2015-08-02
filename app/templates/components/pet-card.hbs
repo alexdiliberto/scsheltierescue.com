@@ -15,11 +15,9 @@
   </div>
   <div class="clearfix pet-body">
     <ul class="clearing-thumbs clearing-feature" data-clearing>
-      {{#each pet.photos as |photo|}}
+      {{#each pet.photos as |photo index|}}
         <li class={{if photo.first 'clearing-featured-img'}}>
-          <a href={{photo.url}} class="th">
-            <img src={{photo.url}} alt={{photo.size}}>
-          </a>
+          {{light-box href=photo.url data-lightbox=(hyphen-concat photo.name pet.id "group") data-title=photo.alt class="th"}}
         </li>
       {{/each}}
     </ul>
