@@ -1,16 +1,20 @@
-<!--[if lte IE 8]>
-<div data-alert class="alert-box warning browsehappy-alert">
-  You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-  <a href="#" class="close">&times;</a>
-</div>
-<![endif]-->
-
 {{title "SC Sheltie Rescue"}}
 
 <div class="page-wrap">
   {{site-top-bar}}
 
-  {{liquid-outlet}}
+  <!--[if lte IE 8]>
+  <div class="alert-box orange accent-3 warning browsehappy-alert">
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  </div>
+  <![endif]-->
+
+  <main role="main" class="container">
+    {{liquid-outlet}}
+  </main>
 </div> {{!-- END div.page-wrap --}}
+
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}
 
 {{site-footer}}

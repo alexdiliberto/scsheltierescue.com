@@ -50,13 +50,13 @@ function petfinderFail() {
 }
 
 function petfinderAlways(data) {
-  Ember.run.scheduleOnce('afterRender', this, reinitializeFoundation);
+  //Ember.run.scheduleOnce('afterRender', this, reinitializeFoundation);
   return data;
 }
 
-function reinitializeFoundation() {
-  return Ember.$(document).foundation('clearing', 'reflow');
-}
+// function reinitializeFoundation() {
+//   return Ember.$(document).foundation('clearing', 'reflow');
+// }
 
 export default Route.extend({
   beforeModel() {

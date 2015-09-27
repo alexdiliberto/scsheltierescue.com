@@ -1,9 +1,9 @@
-<div class="pet-box clearfix panel">
+<div class="pet-box panel grey lighten-4">
   <div class="clearfix pet-header">
     <h2 class="pet-name"><span class="label">{{pet.name}}</span></h2>
     <ul class="options">
       {{#each pet.options as |opt|}}
-        <li>
+        <li class="option">
           {{#if opt.icon}}
             <span>{{opt.text}} <span class="icon-checkmark"></span></span>
           {{else}}
@@ -16,7 +16,7 @@
   <div class="clearfix pet-body">
     <ul class="clearing-thumbs clearing-feature" data-clearing>
       {{#each pet.photos as |photo index|}}
-        <li class={{if photo.first 'clearing-featured-img'}}>
+        <li class="clearing-featured-img" style='{{unless photo.first "display: none;"}}'>
           {{light-box href=photo.url data-lightbox=(hyphen-concat photo.name pet.id "group") data-title=photo.alt class="th"}}
         </li>
       {{/each}}

@@ -2,7 +2,7 @@ const options = { duration: 400 };
 
 export default function() {
   this.transition(
-    this.childOf('.page-wrap'),
+    this.childOf('.container'),
     this.use('crossFade', options)
   );
   this.transition(
