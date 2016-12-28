@@ -1,8 +1,9 @@
 {
   "name": "foundation-libsass-template",
   "dependencies": {
-    "foundation": "5.5.3",
+    "foundation-sites": "6.3.0",
     "handlebars": "4.0.5",
-    "jquery": "2.2.4"
+    "jquery": "2.2.4",
+    "motion-ui": "~1.2.2"
   }
 }

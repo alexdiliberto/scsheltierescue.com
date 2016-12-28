@@ -16,7 +16,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="/css/app.20161216.css"> <!-- Cache Busting -->
-    <script src="/js/vendor/modernizr.20161216.js"></script> <!-- Cache Busting -->
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -27,34 +26,34 @@
     <![endif]-->
 
     <div class="page-wrap">
-      <div class="contain-to-grid sticky">
-        <nav class="top-bar" data-topbar>
-          <ul class="title-area">
-            <!-- Title Area -->
-            <li class="name">
-              <h1 class="show-for-large-up"><a href="/">South Carolina Sheltie Rescue</a></h1>
-              <h1 class="show-for-medium-down"><a href="/">SCSR</a></h1>
-            </li>
-            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-          </ul>
-
-          <section class="top-bar-section">
-            <ul class="right">
-              <li class="active"><a href="/">Home</a></li>
-              <li class="has-dropdown"><a href="/adoptable-dogs/">Adopt</a>
-                <ul class="dropdown">
-                  <li><a href="/adoption-requirements/">Adoption Requirements</a></li>
-                  <li><a href="/adoptable-dogs/">Adoptable Dogs</a></li>
-                  <li><a href="/adoption-application/">Adoption Application</a></li>
-                  <li><a href="/fostering-application/">Fostering Application</a></li>
-                </ul>
-              </li>
-              <li><a href="/surrender/">Surrender a Sheltie</a></li>
-              <li><a href="/help-and-advice/">Help and Advice</a></li>
-              <li><a href="/events/">Rescue Events</a></li>
-            </ul>
-          </section>
+      <div data-sticky-container>
+        <nav class="top-bar" data-sticky data-margin-top="0" style="width: 100%">
+          <div class="top-bar-title">
+            <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+              <button class="menu-icon dark" type="button" data-toggle></button>
+            </span>
+            <h1 class="show-for-large"><a class="top-bar--anchor" href="/">South Carolina Sheltie Rescue</a></h1>
+            <h1 class="hide-for-large"><a class="top-bar--anchor" href="/">SCSR</a></h1>
+          </div>
+          <div>
+            <div class="top-bar-right">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="active"><a href="/">Home</a></li>
+                <li>
+                  <a class="top-bar--anchor" href="/adoptable-dogs/">Adopt</a>
+                  <ul class="menu vertical">
+                    <li><a class="top-bar--anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
+                    <li><a class="top-bar--anchor" href="/adoptable-dogs/">Adoptable Dogs</a></li>
+                    <li><a class="top-bar--anchor" href="/adoption-application/">Adoption Application</a></li>
+                    <li><a class="top-bar--anchor" href="/fostering-application/">Fostering Application</a></li>
+                  </ul>
+                </li>
+                <li><a class="top-bar--anchor" href="/surrender/">Surrender a Sheltie</a></li>
+                <li><a class="top-bar--anchor" href="/help-and-advice/">Help and Advice</a></li>
+                <li><a class="top-bar--anchor" href="/events/">Rescue Events</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
 
@@ -67,30 +66,51 @@
               </a>
               <p class="header-content no-margin-bottom"><strong>South Carolina Sheltie Rescue</strong> is a non-profit group comprised of volunteers who donate their time, abilities, and homes to help displaced, abandoned, and abused Shelties find a forever home.</p>
             </div>
-            <div class="large-8 columns show-for-large-up">
-              <ul class="main-header-picture-slider" data-orbit>
-                <li>
-                  <img src="/img/kronos_667x500.jpg" alt="Slide 1" />
-                </li>
-                <li>
-                  <img src="/img/nash_667x500.jpg" alt="Slide 2" />
-                </li>
-                <li>
-                  <img src="/img/shadow_667x500.jpg" alt="Slide 3" />
-                </li>
-                <li>
-                  <img src="/img/savvy_667x500.jpg" alt="Slide 4" />
-                </li>
-                <li>
-                  <img src="/img/nash2_667x500.jpg" alt="Slide 5" />
-                </li>
-                <li>
-                  <img src="/img/britt_667x500.jpg" alt="Slide 6" />
-                </li>
-                <li>
-                  <img src="/img/lita_667x500.jpg" alt="Slide 7" />
-                </li>
-              </ul>
+            <div class="large-8 columns show-for-large">
+              <div class="orbit" role="region" aria-label="SCSR Sheltie Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+                <ul class="orbit-container">
+                  <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                  <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+                  <li class="is-active orbit-slide">
+                    <img class="orbit-image" src="/img/kronos_667x500.jpg" alt="Photo of Kronos">
+                    <figcaption class="orbit-caption">Kronos</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/nash_667x500.jpg" alt="Photo of Nash">
+                    <figcaption class="orbit-caption">Nash</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/shadow_667x500.jpg" alt="Photo of Shadow">
+                    <figcaption class="orbit-caption">Shadow</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/savvy_667x500.jpg" alt="Photo of Savvy">
+                    <figcaption class="orbit-caption">Savvy</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/nash2_667x500.jpg" alt="Photo of Nash">
+                    <figcaption class="orbit-caption">Nash</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/britt_667x500.jpg" alt="Photo of Britt">
+                    <figcaption class="orbit-caption">Britt</figcaption>
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="/img/lita_667x500.jpg" alt="Photo of Lita">
+                    <figcaption class="orbit-caption">Lita</figcaption>
+                  </li>
+                </ul>
+                <nav class="orbit-bullets">
+                  <button class="is-active" data-slide="0"><span class="show-for-sr">A photograph of Kronos.</span><span class="show-for-sr">Current Slide</span></button>
+                  <button data-slide="1"><span class="show-for-sr">A photograph of Nash.</span></button>
+                  <button data-slide="2"><span class="show-for-sr">A photograph of Shadow.</span></button>
+                  <button data-slide="3"><span class="show-for-sr">A photograph of Savvy.</span></button>
+                  <button data-slide="4"><span class="show-for-sr">A photograph of Nash.</span></button>
+                  <button data-slide="5"><span class="show-for-sr">A photograph of Britt.</span></button>
+                  <button data-slide="6"><span class="show-for-sr">A photograph of Lita.</span></button>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -99,37 +119,47 @@
       <div class="row">
         <div class="large-12 medium-12 small-12 columns">
           <main role="main" class="main-content">
-            <ul class="main-content-slider" data-orbit data-options="animation: slide; timer_speed: 5000; animation_speed: 500; stack_on_small: false; slide_number: true; navigation_arrows: true; swipe: true;">
-              <li data-orbit-slide="headline-1">
-                <div>
-                  <h2>Upcoming Events</h2>
-                  <ul class="upcoming-events-list">
-                                        <li><em><b>Sheltie Fun Day 2016</b></em></li>
-                                        <li><em>Sunday, June 12</em></li>
-                                        <li><em>11:30am - 3:30pm</em></li>
-                                        <li><em>Saluda Shoals Park, Red Bud Shelter</em></li>
-                                        <li><em><i><b>More info on the events page!!</b></i></em></li>
-                  </ul>
-                </div>
-              </li>
-              <li data-orbit-slide="headline-2">
-                <div>
-                  <h2>Recent Donations - Thank You!</h2>
-                  <ul class="recent-donations">
-                    <li><em>Betty & Rudy J.</em></li>
-                    <li><em>Janet & Rob B.</em></li>
-                    <li><em>Pam H.</em></li>
-                    <li><em>Joan M.</em></li>
-                    <li><em>Angela B.</em></li>
-                    <li><em>Pat & Alison W.</em></li>
-                    <li><em>Karyn B.</em></li>
-                    <li><em>Gloria G. & Alexander G.</em></li>
-                    <li><em>Sherry P.</em></li>
-                    <li><em>Wendy H. (in memory of Kali Tully)</em></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+            <div class="orbit" role="region" aria-label="SCSR Main Headlines Carousel" data-orbit>
+              <ul class="main-content-slider">
+                <button class="orbit-previous main-content-orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                <button class="orbit-next main-content-orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+                <li class="is-active orbit-slide">
+                  <div>
+                    <h2>Upcoming Events</h2>
+                    <ul class="upcoming-events-list">
+                      <li><em><b>Sheltie Fun Day 2016</b></em></li>
+                      <li><em>Sunday, June 12</em></li>
+                      <li><em>11:30am - 3:30pm</em></li>
+                      <li><em>Saluda Shoals Park, Red Bud Shelter</em></li>
+                      <li><em><i><b>More info on the events page!!</b></i></em></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="orbit-slide">
+                  <div>
+                    <h2>Recent Donations - Thank You!</h2>
+                    <ul class="recent-donations">
+                      <li><em>Betty &amp; Rudy J.</em></li>
+                      <li><em>Janet &amp; Rob B.</em></li>
+                      <li><em>Pam H.</em></li>
+                      <li><em>Joan M.</em></li>
+                      <li><em>Angela B.</em></li>
+                      <li><em>Pat &amp; Alison W.</em></li>
+                      <li><em>Karyn B.</em></li>
+                      <li><em>Gloria G. &amp; Alexander G.</em></li>
+                      <li><em>Sherry P.</em></li>
+                      <li><em>Wendy H. (in memory of Kali Tully)</em></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0"><span class="show-for-sr">A list of upcoming SCSR events.</span><span class="show-for-sr">Current Slide</span></button>
+                <button data-slide="1"><span class="show-for-sr">A list of recent donations.</span></button>
+              </nav>
+            </div>
+
             <div class="large-6 columns">
               <h2 class="headline first">About Us</h2>
               <p>SC Sheltie Rescue is a non-profit group comprised of volunteers who donate their time, abilities, and homes to help displaced, abandoned, and abused Shelties find a forever home. Our main goals are the protection and care of the Shelties already here, the prevention of over-breeding and poor breeding practices, and the education of any Sheltie owner who requests it.</p>
@@ -196,7 +226,7 @@
 
     <script src="/bower_components/jquery/dist/jquery.min.20161216.js"></script> <!-- Cache Busting -->
     <script src="/js/plugins.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/bower_components/foundation/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
     <script src="/js/foundation-orbit-init.20161216.js"></script> <!-- Cache Busting -->
   </body>
 </html>

@@ -1,7 +1,10 @@
 @import "settings";
-@import "foundation";
 
-@import "normalize";
+@import "foundation";
+@include foundation-everything;
+
+@import "motion-ui";
+@include motion-ui-transitions;
 
 @import "icon-fonts";
 
@@ -11,6 +14,50 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+.top-bar--anchor {
+  color: $white;
+  &:hover,
+  &:active {
+    background-color: darken($topbar-bg-color, 10%);
+  }
+}
+
+.orbit-previous,
+.orbit-next {
+  z-index: 1;
+}
+
+.main-content-slider {
+  margin: 0;
+}
+
+.main-content-orbit-previous,
+.main-content-orbit-next {
+  top: 150px;
+}
+
+
+
+
+
+
+
+
+
+$footer-height: 250px !default;
+$header-font-weight: 400;
+$main-content-slider-bg: #2ba6cb;
+$topbar-height: 45px;
+$topbar-bg-color: #333;
+
+$green: #008744;
+$blue: #0057e7;
+$red: #d62d20;
+$yellow: #ffa700;
+$white: #eee;
+
+$loader-width: 100px;
 
 html,
 body {
@@ -172,7 +219,7 @@ div.error > input[type=radio] {
 
 .clearing-assembled {
   text-align: center;
-  @media #{$medium-up} {
+  @include breakpoint(medium) {
     text-align: start;
   }
 }
@@ -181,7 +228,7 @@ ul.clearing-thumbs.clearing-feature {
   display: inline-block;
   float: none;
   margin-bottom: rem-calc(16);
-  @media #{$medium-up} {
+  @include breakpoint(medium) {
     display: block;
     float: left;
     margin-bottom: 0;
@@ -206,7 +253,7 @@ ul.clearing-thumbs.clearing-feature {
   text-align: center;
   li {
     &:after {
-      @media #{$medium-up} {
+      @include breakpoint(medium) {
         content: " | ";
       }
     }
@@ -216,11 +263,11 @@ ul.clearing-thumbs.clearing-feature {
         content: "";
       }
     }
-    @media #{$medium-up} {
+    @include breakpoint(medium) {
       display: inline;
     }
   }
-  @media #{$large-up} {
+  @include breakpoint(large) {
     font-size: rem-calc(16);
   }
 }

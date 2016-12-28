@@ -16,7 +16,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="/css/app.20161216.css"> <!-- Cache Busting -->
-    <script src="/js/vendor/modernizr.20161216.js"></script> <!-- Cache Busting -->
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -32,7 +31,7 @@
           <ul class="title-area">
             <!-- Title Area -->
             <li class="name">
-              <h1 class="show-for-large-up"><a href="/">South Carolina Sheltie Rescue</a></h1>
+              <h1 class="show-for-large"><a href="/">South Carolina Sheltie Rescue</a></h1>
               <h1 class="show-for-medium-down"><a href="/">SCSR</a></h1>
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -563,7 +562,7 @@
     <script src="/bower_components/handlebars/handlebars.runtime.min.20161216.js"></script> <!-- Cache Busting -->
     <script src="/js/plugins.20161216.js"></script> <!-- Cache Busting -->
     <script src="/js/templates.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/bower_components/foundation/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
     <script src="/js/apply-form.20161216.js"></script> <!-- Cache Busting -->
   </body>
 </html>
