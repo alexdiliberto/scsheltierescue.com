@@ -2,12 +2,23 @@
 // ---------
 
 $white: #fefefe;
-$topbar-bg-color: #333;
+$topbar-bg-color: #333333;
+
+// 16. Drilldown
+// -------------
+
+$drilldown-arrow-color: $white;
 
 // 18. Dropdown Menu
 // -----------------
 
 $dropdownmenu-arrow-color: $white;
+$dropdownmenu-border: 1px solid $topbar-bg-color;
+
+// 35. Title Bar
+// -------------
+
+$titlebar-background: $topbar-bg-color;
 
 // 37. Top Bar
 // -----------

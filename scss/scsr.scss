@@ -1,0 +1,73 @@
+$panel-bg-color: #e2e2e2;
+$panel-callout-bg-color: #ecfaff;
+
+/*
+  Prevents top-bar from "flashing" during the window after DOM has initially been rendered but before Foundation Javascript has completely executed
+
+    https://github.com/zurb/foundation-sites/issues/7252
+*/
+.no-js [data-responsive-menu],
+.no-js [data-responsive-toggle] {
+  display: none;
+}
+
+.top-bar__anchor {
+  color: $white;
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: darken($topbar-bg-color, 10%);
+  }
+}
+
+.top-bar__anchor.active {
+  color: $white;
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.js-drilldown-back a {
+  color: $drilldown-arrow-color;
+}
+
+.top-bar__title-link {
+  font-size: rem-calc(18);
+  margin: 0;
+}
+
+.orbit-previous,
+.orbit-next {
+  z-index: 1;
+}
+
+.main-content-slider {
+  margin: 0;
+}
+
+.main-content-orbit-previous,
+.main-content-orbit-next {
+  top: 150px;
+}
+
+.panel {
+  margin-top: rem-calc(16);
+}
+
+.panel--callout {
+  background-color: $panel-callout-bg-color
+}
+
+.top-bar {
+  z-index: 5;
+}
+
+.top-bar__dropdown {
+  z-index: 1;
+}
+
+.top-bar__dropdown-item {
+  z-index: 2;
+}

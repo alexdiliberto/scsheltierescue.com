@@ -7,15 +7,15 @@
     <meta name="description" content="South Carolina Sheltie Rescue is a non-profit volunteer group dedicated to helping Shetland Sheepdogs in Columbia, SC and the surrounding areas.">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.20161216.png"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-192x192.20161216.png" sizes="192x192"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-32x32.20161216.png" sizes="32x32"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-16x16.20161216.png" sizes="16x16"> <!-- Cache Busting -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.20161228.png"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-192x192.20161228.png" sizes="192x192"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.20161228.png" sizes="32x32"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-16x16.20161228.png" sizes="16x16"> <!-- Cache Busting -->
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/app.20161216.css"> <!-- Cache Busting -->
+    <link rel="stylesheet" href="/css/app.20161228.css"> <!-- Cache Busting -->
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -28,29 +28,31 @@
     <div class="page-wrap">
       <div data-sticky-container>
         <nav class="top-bar" data-sticky data-margin-top="0" style="width: 100%">
-          <div class="top-bar-title">
-            <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-              <button class="menu-icon dark" type="button" data-toggle></button>
-            </span>
-            <h1 class="show-for-large"><a class="top-bar--anchor" href="/">South Carolina Sheltie Rescue</a></h1>
-            <h1 class="hide-for-large"><a class="top-bar--anchor" href="/">SCSR</a></h1>
+          <div class="title-bar" data-responsive-toggle="main-menu--responsive" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="main-menu--responsive"></button>
+            <div class="title-bar-title">Menu</div>
           </div>
-          <div>
+
+          <div id="main-menu--responsive">
+            <div class="top-bar-left">
+              <h1 class="menu-text top-bar__title-link show-for-large"><a class="top-bar__anchor" href="/">South Carolina Sheltie Rescue</a></h1>
+              <h1 class="menu-text top-bar__title-link show-for-medium-only"><a class="top-bar__anchor" href="/">SCSR</a></h1>
+            </div>
             <div class="top-bar-right">
-              <ul class="dropdown menu" data-dropdown-menu>
-                <li class="active"><a href="/">Home</a></li>
+              <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+                <li class="top-bar__anchor active"><a href="/">Home</a></li>
                 <li>
-                  <a class="top-bar--anchor" href="/adoptable-dogs/">Adopt</a>
-                  <ul class="menu vertical">
-                    <li><a class="top-bar--anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
-                    <li><a class="top-bar--anchor" href="/adoptable-dogs/">Adoptable Dogs</a></li>
-                    <li><a class="top-bar--anchor" href="/adoption-application/">Adoption Application</a></li>
-                    <li><a class="top-bar--anchor" href="/fostering-application/">Fostering Application</a></li>
+                  <a class="top-bar__anchor" href="/adoptable-dogs/">Adopt</a>
+                  <ul class="menu vertical top-bar__dropdown">
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoptable-dogs/">Adoptable Dogs</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-application/">Adoption Application</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/fostering-application/">Fostering Application</a></li>
                   </ul>
                 </li>
-                <li><a class="top-bar--anchor" href="/surrender/">Surrender a Sheltie</a></li>
-                <li><a class="top-bar--anchor" href="/help-and-advice/">Help and Advice</a></li>
-                <li><a class="top-bar--anchor" href="/events/">Rescue Events</a></li>
+                <li><a class="top-bar__anchor" href="/surrender/">Surrender a Sheltie</a></li>
+                <li><a class="top-bar__anchor" href="/help-and-advice/">Help and Advice</a></li>
+                <li><a class="top-bar__anchor" href="/events/">Rescue Events</a></li>
               </ul>
             </div>
           </div>
@@ -60,13 +62,13 @@
       <div class="row">
         <div class="large-12 medium-12 small-12 columns">
           <div class="head_panel panel clearfix">
-            <div class="large-4 columns">
+            <div class="medium-4 columns">
               <a href="/">
                 <img src="/img/SCSR-Logo-New_500x606.jpg" alt="SCSR logo" class="center margin-bottom" />
               </a>
               <p class="header-content no-margin-bottom"><strong>South Carolina Sheltie Rescue</strong> is a non-profit group comprised of volunteers who donate their time, abilities, and homes to help displaced, abandoned, and abused Shelties find a forever home.</p>
             </div>
-            <div class="large-8 columns show-for-large">
+            <div class="medium-8 columns show-for-medium">
               <div class="orbit" role="region" aria-label="SCSR Sheltie Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
                 <ul class="orbit-container">
                   <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
@@ -177,7 +179,7 @@
               <p>Also, please check out our <a class="external-link" href="http://www.amazon.com/gp/registry/giftlist/3UK24WGE6GM8D" target="_blank">Wishlist<span class="icon-new-tab"></span></a> for other great ways to help make a difference!</p>
             </div>
             <div class="large-12 columns">
-              <div class="panel callout clearfix">
+              <div class="panel callout panel--callout clearfix">
                 <div class="large-12 medium-12 hide-for-small-only columns">
                   <p class="text-center">Please donate <strong>today</strong> and help make a <strong><u>difference</u></strong>!</p>
                 </div>
@@ -224,9 +226,10 @@
     </footer>
 
 
-    <script src="/bower_components/jquery/dist/jquery.min.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/js/plugins.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/js/foundation-orbit-init.20161216.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/jquery/dist/jquery.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/js/plugins.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/what-input/dist/what-input.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/js/foundation-init.20161228.js"></script> <!-- Cache Busting -->
   </body>
 </html>

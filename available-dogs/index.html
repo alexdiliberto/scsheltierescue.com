@@ -7,15 +7,15 @@
     <meta name="description" content="List of SC Sheltie Rescue dogs available for adoption.">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.20161216.png"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-192x192.20161216.png" sizes="192x192"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-32x32.20161216.png" sizes="32x32"> <!-- Cache Busting -->
-    <link rel="icon" type="image/png" href="/favicon-16x16.20161216.png" sizes="16x16"> <!-- Cache Busting -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.20161228.png"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-192x192.20161228.png" sizes="192x192"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.20161228.png" sizes="32x32"> <!-- Cache Busting -->
+    <link rel="icon" type="image/png" href="/favicon-16x16.20161228.png" sizes="16x16"> <!-- Cache Busting -->
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/css/app.20161216.css"> <!-- Cache Busting -->
+    <link rel="stylesheet" href="/css/app.20161228.css"> <!-- Cache Busting -->
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -26,34 +26,36 @@
     <![endif]-->
 
     <div class="page-wrap">
-      <div class="contain-to-grid sticky">
-        <nav class="top-bar" data-topbar>
-          <ul class="title-area">
-            <!-- Title Area -->
-            <li class="name">
-              <h1 class="show-for-large"><a href="/">South Carolina Sheltie Rescue</a></h1>
-              <h1 class="show-for-medium-down"><a href="/">SCSR</a></h1>
-            </li>
-            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-          </ul>
+      <div data-sticky-container>
+        <nav class="top-bar" data-sticky data-margin-top="0" style="width: 100%">
+          <div class="title-bar" data-responsive-toggle="main-menu--responsive" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="main-menu--responsive"></button>
+            <div class="title-bar-title">Menu</div>
+          </div>
 
-          <section class="top-bar-section">
-            <ul class="right">
-              <li><a href="/">Home</a></li>
-              <li class="has-dropdown"><a href="/adoptable-dogs/">Adopt</a>
-                <ul class="dropdown">
-                  <li><a href="/adoption-requirements/">Adoption Requirements</a></li>
-                  <li class="active"><a href="/adoptable-dogs/">Adoptable Dogs</a></li>
-                  <li><a href="/adoption-application/">Adoption Application</a></li>
-                  <li><a href="/fostering-application/">Fostering Application</a></li>
-                </ul>
-              </li>
-              <li><a href="/surrender/">Surrender a Sheltie</a></li>
-              <li><a href="/help-and-advice/">Help and Advice</a></li>
-              <li><a href="/events/">Rescue Events</a></li>
-            </ul>
-          </section>
+          <div id="main-menu--responsive">
+            <div class="top-bar-left">
+              <h1 class="menu-text top-bar__title-link show-for-large"><a class="top-bar__anchor" href="/">South Carolina Sheltie Rescue</a></h1>
+              <h1 class="menu-text top-bar__title-link show-for-medium-only"><a class="top-bar__anchor" href="/">SCSR</a></h1>
+            </div>
+            <div class="top-bar-right">
+              <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+                <li class="top-bar__anchor active"><a href="/">Home</a></li>
+                <li>
+                  <a class="top-bar__anchor" href="/adoptable-dogs/">Adopt</a>
+                  <ul class="menu vertical top-bar__dropdown">
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoptable-dogs/">Adoptable Dogs</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-application/">Adoption Application</a></li>
+                    <li><a class="top-bar__dropdown-item top-bar__anchor" href="/fostering-application/">Fostering Application</a></li>
+                  </ul>
+                </li>
+                <li><a class="top-bar__anchor" href="/surrender/">Surrender a Sheltie</a></li>
+                <li><a class="top-bar__anchor" href="/help-and-advice/">Help and Advice</a></li>
+                <li><a class="top-bar__anchor" href="/events/">Rescue Events</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
 
@@ -102,11 +104,12 @@
     </footer>
 
 
-    <script src="/bower_components/jquery/dist/jquery.min.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/bower_components/handlebars/handlebars.runtime.min.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/js/plugins.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/js/templates.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161216.js"></script> <!-- Cache Busting -->
-    <script src="/js/petfinder.20161216.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/jquery/dist/jquery.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/handlebars/handlebars.runtime.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/js/plugins.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/js/templates.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/what-input/dist/what-input.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/bower_components/foundation-sites/dist/js/foundation.min.20161228.js"></script> <!-- Cache Busting -->
+    <script src="/js/petfinder.20161228.js"></script> <!-- Cache Busting -->
   </body>
 </html>

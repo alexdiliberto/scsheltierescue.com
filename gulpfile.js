@@ -1,5 +1,4 @@
 var gulp         = require('gulp');
-var babel        = require("gulp-babel");
 var sass         = require('gulp-sass');
 var minifycss    = require('gulp-minify-css');
 var uglify       = require('gulp-uglify');
@@ -8,15 +7,8 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // Clean
 gulp.task('clean', function() {
-  return del(['css', 'js/vendor']);
+  return del(['css']);
 });
-
-// JS
-// gulp.task("default", function () {
-//   return gulp.src("src/app.js")
-//     .pipe(babel())
-//     .pipe(gulp.dest("dist"));
-// });
 
 // Styles
 gulp.task('styles', ['clean'], function() {
@@ -32,21 +24,14 @@ gulp.task('styles', ['clean'], function() {
     .pipe(gulp.dest('css'));
 });
 
-// Uglify
-// gulp.task('uglify', ['clean'], function() {
-//   return gulp.src('bower_components/modernizr/modernizr.js')
-//     .pipe(uglify())
-//     .pipe(gulp.dest('js/vendor'))
-// });
-
 // Default
-gulp.task('default', ['styles'/*, 'uglify'*/]);
+gulp.task('default', ['styles']);
 
 // Watch
-gulp.task('watch', ['clean'], function() {
-  // Watch .scss files
+gulp.task('watch', ['styles'], function() {
   gulp.watch([
     'bower_components/foundation-sites/scss/**/*.scss',
+    'bower_components/motion-ui/src/**/*.scss',
     'scss/**/*.scss'
     ], ['styles']);
 });
