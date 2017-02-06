@@ -71,3 +71,12 @@ $panel-callout-bg-color: #ecfaff;
 .top-bar__dropdown-item {
   z-index: 2;
 }
+
+.pet-photos {
+  list-style-type: none;
+  margin: 0;
+  cursor: pointer;
+  .lg-picture:not(.clearing-featured-img) {
+    display: none;
+  }
+}

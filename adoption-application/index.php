@@ -40,8 +40,8 @@
             </div>
             <div class="top-bar-right">
               <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
-                <li class="top-bar__anchor active"><a href="/">Home</a></li>
-                <li>
+                <li><a class="top-bar__anchor" href="/">Home</a></li>
+                <li class="active">
                   <a class="top-bar__anchor" href="/adoptable-dogs/">Adopt</a>
                   <ul class="menu vertical top-bar__dropdown">
                     <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
@@ -630,7 +630,7 @@
                   <p>NOTE: If you are under 18 years of age, a parent or guardian must also sign the application. Thank you for considering a dog from South Carolina Sheltie Rescue. If you have any questions, or if we can be of assistance, please do not hesitate to <a href="mailto:amanda@southcarolinasheltierescue.com">email</a> us.</p>
                   <p><strong>We reserve the right to refuse any applicant.</strong></p>
 
-                  <input id="submit" name="submit" type="submit" class="large button expand" value="Submit">
+                  <input id="submit" name="submit" type="submit" class="large button expanded" value="Submit">
                 </div>
               </div>
 

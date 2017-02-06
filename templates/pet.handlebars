@@ -1,5 +1,5 @@
 {{#each pets}}
-  <div class="pet-box clearfix panel">
+  <div class="pet-box clearfix panel callout secondary">
     <div class="clearfix pet-header">
       <h2 class="pet-name"><span class="label">{{name}}</span></h2>
       <ul class="options">
@@ -15,12 +15,10 @@
       </ul>
     </div>
     <div class="clearfix pet-body">
-      <ul class="clearing-thumbs clearing-feature" data-clearing>
+      <ul class="clearing-thumbs clearing-feature pet-photos">
         {{#each photos}}
-          <li {{#if first}}class="clearing-featured-img"{{/if}}>
-            <a href={{src}} class="th">
-              <img src={{src}} alt={{alt}}>
-            </a>
+          <li data-src={{src}} class="lg-picture {{#if first}}clearing-featured-img{{/if}}" style="max-width: 12.5rem;">
+            <img src={{src}} alt={{alt}}>
           </li>
         {{/each}}
       </ul>

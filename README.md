@@ -22,7 +22,7 @@ gulp watch
 
 When making template changes don't forget to precompile again:
 ```sh
-handlebars templates/ -f js/templates.js
+npm run hbs
 ```
 
 ##Foundation Dependency Updates

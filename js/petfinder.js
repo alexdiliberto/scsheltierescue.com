@@ -62,6 +62,11 @@ function petfinderFail(jqXHR, textStatus, errorThrown) {
 
 function petfinderAlways() {
   $(document).foundation();
+
+  $("#pets").lightGallery({
+    selector: '.lg-picture',
+    thumbnail: true
+  });
 }
 
 function formatPet(pet) {

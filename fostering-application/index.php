@@ -40,8 +40,8 @@
             </div>
             <div class="top-bar-right">
               <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
-                <li class="top-bar__anchor active"><a href="/">Home</a></li>
-                <li>
+                <li><a class="top-bar__anchor" href="/">Home</a></li>
+                <li class="active">
                   <a class="top-bar__anchor" href="/adoptable-dogs/">Adopt</a>
                   <ul class="menu vertical top-bar__dropdown">
                     <li><a class="top-bar__dropdown-item top-bar__anchor" href="/adoption-requirements/">Adoption Requirements</a></li>
